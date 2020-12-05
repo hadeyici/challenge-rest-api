@@ -4,7 +4,11 @@
   "author": "Hatice Ergun",
   "description": "This is REST API challenge.",
   "scripts": {
-    "start": "npm run serve:dev ./bin/www.js"
+    "start": "npm run serve:dev ./bin/www.js",
+    "serve:dev": "nodemon $2 --exec babel-node",
+    "build:dist": "rimraf dist/ && babel ./ --out-dir ./dist/ --ignore ./node_modules",
+    "serve:dist": "node ./dist/bin/www",
+    "prod": "npm run build:dist && npm run serve:dist"
   },
   "dependencies": {
     "dotenv": "8.2.0",
@@ -13,6 +17,13 @@
     "body-parser": "1.19.0"
   },
   "devDependencies": {
+    "@babel/cli": "7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/node": "^7.12.6",
+    "@babel/preset-env": "^7.12.7",
+    "eslint": "7.15.0",
+    "eslint-config-airbnb-base": "14.2.1",
+    "eslint-plugin-import": "2.22.1",
     "nodemon": "2.0.6",
     "rimraf": "3.0.2"
   }
