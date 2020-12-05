@@ -1,5 +1,7 @@
 # getir-challenge
-This is REST API challenge
+This is REST API 
+
+https://challenge-case-study.herokuapp.com/
 
 ## About
 
