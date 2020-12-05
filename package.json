@@ -1,14 +1,15 @@
 {
-  "name": "getir-challenge",
+  "name": "challenge",
   "version": "1.0.0",
   "author": "Hatice Ergun",
   "description": "This is REST API challenge.",
   "scripts": {
     "start": "npm run serve:dev ./bin/www.js",
     "serve:dev": "nodemon $2 --exec babel-node",
-    "build:dist": "rimraf dist/ && babel ./ --out-dir ./dist/ --ignore ./node_modules",
+    "build:dist": "rimraf dist/ && babel ./ --out-dir ./dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
     "serve:dist": "node ./dist/bin/www",
-    "prod": "npm run build:dist && npm run serve:dist"
+    "prod": "npm run build:dist && npm run serve:dist",
+    "test": "mocha tests/**/*.js --timeout 60000 --require @babel/register --require @babel/polyfill --exit"
   },
   "dependencies": {
     "dotenv": "8.2.0",
@@ -18,13 +19,20 @@
   },
   "devDependencies": {
     "@babel/cli": "7.12.8",
-    "@babel/core": "^7.12.9",
-    "@babel/node": "^7.12.6",
-    "@babel/preset-env": "^7.12.7",
+    "@babel/core": "7.12.9",
+    "@babel/node": "7.12.6",
+    "@babel/plugin-transform-runtime": "7.12.1",
+    "@babel/polyfill": "7.12.1",
+    "@babel/preset-env": "7.12.7",
+    "@babel/register": "7.12.1",
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
     "eslint": "7.15.0",
     "eslint-config-airbnb-base": "14.2.1",
     "eslint-plugin-import": "2.22.1",
+    "mocha": "^8.2.1",
     "nodemon": "2.0.6",
-    "rimraf": "3.0.2"
+    "rimraf": "3.0.2",
+    "should": "^13.2.3"
   }
 }
