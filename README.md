@@ -1,5 +1,4 @@
-# getir-challenge
-This is REST API 
+# challenge-rest-api
 
 https://challenge-case-study.herokuapp.com/
 
@@ -13,7 +12,7 @@ That's a basic REST API architecture for filtering some data. In the case of the
 
 ```sh
 $ git clone git@github.com:your_github_username/challenge.git
-$ cd challenge
+$ cd challenge-rest-api
 ```
 
 ### 2- Create a .env file in your root folder
