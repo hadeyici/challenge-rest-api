@@ -11,7 +11,7 @@ That's a basic REST API architecture for filtering some data. In the case of the
 ### 1 - Fork repo
 
 ```sh
-$ git clone git@github.com:your_github_username/challenge.git
+$ git clone git@github.com:your_github_username/challenge-rest-api.git
 $ cd challenge-rest-api
 ```
 
