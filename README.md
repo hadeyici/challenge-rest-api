@@ -1,10 +1,14 @@
-# challenge-rest-api
+<h1 align="left"> REST API </h1>
 
-https://challenge-case-study.herokuapp.com/
+This API is deployed on Heroku, so you can use `cURL` or some GUI tools like `POSTMAN` to request and use the `record` endpoint.  
+
+Here we go: https://challenge-case-study.herokuapp.com
+
+Happy enjoy!
 
 ## About
 
-That's a basic REST API architecture for filtering some data. In the case of the challenge, I created an endpoint named is "record" and now we can use filtering data when sending JSON values like "minCount", "maxCount", "startDate", and "endDate" as a POST method. So, there are two major filters one of the "count" and the other filter is the "date". Also helped me this library is Mongoose to creating Schema and management validation.
+That's a basic REST API architecture for filtering some data. In the case of the challenge, I created an endpoint named is "record" and now we can use filtering data when sending JSON values like `minCount`, `maxCount`, `startDate`, and `endDate` as a POST method. So, there are two major filters one of the "count" and the other filter is the "date". Also helped me this library is Mongoose to creating Schema and management validation.
 
 ## Installation
 
@@ -66,7 +70,7 @@ The folder structure of this app is explained below:
 
 | Name                           | Description                                                      |
 | ------------------------------ | ---------------------------------------------------------------- |
-| **bin/www.js**                 | Port listen                                                      |
+| **bin/www**.**js**             | Port listen                                                      |
 | **models/Record.js**           | Defines the registration scheme to be used                       |
 | **node_modules**               | Contains all npm dependencies                                    |
 | **routes/records.js**          | Contain express record route                                     |
@@ -88,7 +92,7 @@ The folder structure of this app is explained below:
 
 | HTTP   | Route | Parameters                             | Description                       |
 | ------ | ----- | -------------------------------------- | --------------------------------- |
-| `POST` | /     | startDate, endDate, minCount, maxCount | Create a new record search query. |
+| `POST` | /     | startDate, endDate, minCount, maxCount | Create a new record filter query. |
 
 ## Request Body
 
@@ -101,7 +105,7 @@ startDate: String | required,
 }
 ```
 
-“startDate” and “endDate” fields filter the data for “createdAt”. “minCount” and “maxCount” are for filtering the data. Sum of "count" sequence documents are between "minCount" and "maxCount".
+`startDate` and `endDate` fields filter the data for `createdAt`. `minCount` and `maxCount` are for filtering the data. Sum of `count` sequence documents are between `minCount` and `maxCount`.
 
 ## Response
 
@@ -113,7 +117,7 @@ code: 0 / 1,
 }
 ```
 
-"records" contain all filtered items.
+`records` contain all filtered items.
 
 ## Example Request Payload
 
